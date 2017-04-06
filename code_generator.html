@@ -1,13 +1,13 @@
 <html>
 <head>
 <title>Home</title>
-<link href="<spring:url value="/resources/static/css/app.css" />" rel="stylesheet" type="text/css">
+<link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<h1>dbms_output generator</h1>
 	 
 	
-	<form:form method="post" modelAttribute="codeForm">
+	<form method="post" modelAttribute="codeForm">
 		<table>
 			<tr>
 				<td></td>
@@ -17,28 +17,28 @@
 			<tr>
 				<td><div id="commands">
 						Obtain dbms_output from:<br>
-						<form:radiobutton id="codeOriginObject" path="codeOrigin" value="from object" />
+						<input type="radiobutton" id="codeOriginObject" path="codeOrigin" value="from object" />
 						from an object<br>
-						<form:radiobutton id="codeOriginType" path="codeOrigin" value="from type" />
+						<input type="radiobutton" id="codeOriginType" path="codeOrigin" value="from type" />
 						from a type<br>
-						<form:checkbox id="withLoop" path="withLoop" checked="checked"/>
+						<input type="checkbox" id="withLoop" path="withLoop" checked="checked"/>
 						with loop <br>
 						<table>
 							<tr>
 								<td>Index name
 								</td>
-								<td><form:input id="indexName" path="indexName" />
+								<td><input id="indexName" path="indexName" />
 								</td>
 							</tr>
 							<tr>
 								<td>Variable name </td>
-								<td> <form:input id="variableName"
+								<td> <input id="variableName"
 										path="variableName" /></td>
 							</tr>
 						</table>
 					</div></td>
-				<td><form:textarea id = "inputText" path="inputText" cols="45" rows="10"></form:textarea></td>
-				<td><form:textarea id = "outputText" path="outputText" cols="45" rows="10"></form:textarea></td>
+				<td><textarea id = "inputText" path="inputText" cols="45" rows="10"></textarea></td>
+				<td><textarea id = "outputText" path="outputText" cols="45" rows="10"></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
@@ -46,8 +46,8 @@
 				<td></td>
 			</tr>
 		</table>
-	</form:form>
+	</form>
 	
-<script type="text/javascript" src="<spring:url value="/resources/static/js/home.js" />"></script>
+<script type="text/javascript" src="js/home.js"></script>
 </body>
 </html>
