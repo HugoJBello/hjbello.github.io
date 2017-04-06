@@ -2,6 +2,7 @@
 <head>
 <title>Home</title>
 <link href="css/app.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 	<h1>dbms_output generator</h1>
@@ -17,9 +18,9 @@
 			<tr>
 				<td><div id="commands">
 						Obtain dbms_output from:<br>
-						<input type="radiobutton" id="codeOriginObject" path="codeOrigin" value="from object" />
+						<input type="radio" name="from" id="codeOriginObject" path="codeOrigin" value="from object" />
 						from an object<br>
-						<input type="radiobutton" id="codeOriginType" path="codeOrigin" value="from type" />
+						<input type="radio" name="from" id="codeOriginType" path="codeOrigin" value="from type" />
 						from a type<br>
 						<input type="checkbox" id="withLoop" path="withLoop" checked="checked"/>
 						with loop <br>
@@ -46,7 +47,9 @@
 				<td></td>
 			</tr>
 		</table>
+		
 	</form>
+	
 	
 <script type="text/javascript" src="js/home.js"></script>
 </body>
