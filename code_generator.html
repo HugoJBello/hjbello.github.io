@@ -9,44 +9,46 @@
 	 
 	
 	<form method="post" modelAttribute="codeForm">
+	<div id="commands">
+		Obtain dbms_output from:<br>
+		<input type="radio" name="from" id="codeOriginObject" path="codeOrigin" value="from object" />
+		from an object<br>
+		<input type="radio" name="from" id="codeOriginType" path="codeOrigin" value="from type" checked = "checked"/>
+		from a type<br>
+		<input type="checkbox" id="withLoop" path="withLoop" checked="checked"/>
+		with loop <br>
 		<table>
 			<tr>
-				<td></td>
-				<td>Paste your code here</td>
-				<td>Generated code</td>
+				<td>Index name
+				</td>
+				<td><input id="indexName" path="indexName" />
+				</td>
 			</tr>
 			<tr>
-				<td><div id="commands">
-						Obtain dbms_output from:<br>
-						<input type="radio" name="from" id="codeOriginObject" path="codeOrigin" value="from object" />
-						from an object<br>
-						<input type="radio" name="from" id="codeOriginType" path="codeOrigin" value="from type" />
-						from a type<br>
-						<input type="checkbox" id="withLoop" path="withLoop" checked="checked"/>
-						with loop <br>
-						<table>
-							<tr>
-								<td>Index name
-								</td>
-								<td><input id="indexName" path="indexName" />
-								</td>
-							</tr>
-							<tr>
-								<td>Variable name </td>
-								<td> <input id="variableName"
-										path="variableName" /></td>
-							</tr>
-						</table>
-					</div></td>
-				<td><textarea id = "inputText" path="inputText" cols="45" rows="10"></textarea></td>
-				<td><textarea id = "outputText" path="outputText" cols="45" rows="10"></textarea></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><input id="generateButton" type="button" value="Convert" onclick="generateDbmsOuput()"/></td>
-				<td></td>
+				<td>Variable name </td>
+				<td> <input id="variableName"
+						path="variableName" /></td>
 			</tr>
 		</table>
+	</div>
+	<br></br>
+	<table>
+		<tr>
+			<td></td>
+			<td>Paste your code here</td>
+			<td>Generated code</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><textarea id = "inputText" path="inputText" cols="45" rows="20"></textarea></td>
+			<td><textarea id = "outputText" path="outputText" cols="45" rows="20"></textarea></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input id="generateButton" type="button" value="Convert" onclick="generateDbmsOuput()"/></td>
+			<td></td>
+		</tr>
+	</table>
 		
 	</form>
 	
@@ -56,8 +58,28 @@
 $(function(){
 $("#indexName").val("index");
 $("#variableName").val("result");
+
+$("#outputText").click(function() {
+   var size = $(this).height();
+   console.log(size);
+   $("#inputText").height(size);
+    
+});
+
+$("#inputText").click(function() {
+   var size = $(this).height();
+   console.log(size);
+   $("#outputText").height(size);
+    
+});
+
 });
 </script>
+
+<script type="text/javascript">
+
+</script>
+
 
 </body>
 </html>
