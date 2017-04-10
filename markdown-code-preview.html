@@ -30,7 +30,8 @@
 </head>
 <body>
 	<h1>markdown-code preview</h1>
- 
+    
+ <input id="generateButton" type="button" value="Convert"/>
  <section class="container">
     <div class="one">
 	<textarea id = "MyID" path="inputText" cols="45" rows="20"></textarea>
@@ -39,7 +40,7 @@
 	<textarea id = "MyID2" path="inputText" cols="60" rows="31"></textarea>
 	</div>
 </section>
- <input id="generateButton" type="button" value="Convert"/>
+ 
  <script>
 var simplemde = new SimpleMDE({ element: document.getElementById("MyID") });
 $("#generateButton").click(function() {
