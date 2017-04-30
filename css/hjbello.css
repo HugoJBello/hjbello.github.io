@@ -9,3 +9,26 @@ code {
 a code {
   color: #08c;
 }
+
+#content{
+    width:800px;
+    padding:10px;
+}
+
+#banner{
+    width:200px;
+    height:400px;
+    float:right;  
+    padding:10px;     
+    margin-left:30px;
+    margin-top:50px;
+    font-size: 90%;
+}
+
+.container-narrow {
+  margin: 0 auto;
+  max-width: 800px; }
+
+.container-narrow > hr {
+  margin: 30px 0; }
+
